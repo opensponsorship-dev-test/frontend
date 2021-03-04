@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout";
 
+import Form from "./components/Forms/Form";
+import {MuiPickersUtilsProvider} from "@material-ui/pickers";
+import MomentUtils from "@date-io/moment";
+import {applyMiddleware, combineReducers, createStore, compose} from "redux";
+import ReduxThunk from "redux-thunk";
+import {Provider} from "react-redux";
+import athleteReducer from "./store/reducers/athleteReducer";
+
+const rootReducer = combineReducers({
+  athlete: athleteReducer,
+});
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
+
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(ReduxThunk)));
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <div>
+          <Layout>
+            <Form />
+          </Layout>
+        </div>
+      </MuiPickersUtilsProvider>
+    </Provider>
   );
 }
 
