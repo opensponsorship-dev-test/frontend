@@ -13,3 +13,5 @@
 - I did not have time to add a stepper display to show what page of the form the user is on
 
 - I did not have time to design "a well styled profile" so I just output each athletes
+
+- Did not have time to add a file upload so the image is just a pasted link for now
