@@ -1,11 +1,13 @@
 # React Front end
 
-Was able to successfully create a multiple step form in React allowing the user to input all required fields. 
+- Was able to successfully create a multiple step form in React allowing the user to input all required fields. 
 
-Set up a redux store for state management
+- Set up a redux store for state management
 
-Implemented GET and POST endpoints from the backend to load athletes and save new athletes. 
+- Implemented GET and POST endpoints from the backend to load athletes and save new athletes. 
 
-Data is validated on the server but I did not have time to set up proper error handling. 
+- Data is validated on the server but I did not have time to set up proper error handling. 
 
-I did not have time to design "a well styled profile" so I just output each athletes
+- I did not have time to add a stepper display to show what page of the form the user is on
+
+- I did not have time to design "a well styled profile" so I just output each athletes
