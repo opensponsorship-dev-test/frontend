@@ -6,6 +6,8 @@
 
 - Implemented GET and POST endpoints from the backend to load athletes and save new athletes. 
 
+- Did not have time to implement PUT endpoint for updating profiles
+
 - Data is validated on the server but I did not have time to set up proper error handling. 
 
 - I did not have time to add a stepper display to show what page of the form the user is on
