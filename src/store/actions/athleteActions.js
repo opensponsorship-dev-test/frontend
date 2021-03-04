@@ -30,7 +30,7 @@ export const saveAthlete = athleteData => {
 
     try {
       let {about, dateOfBirth, gender, image, interests, location, sport, name, team} = athleteData;
-      console.log(sport.split(","));
+
       const res = await axios.post(`https://os-dev-test.herokuapp.com/api/athletes`, {
         about,
         dateOfBirth,
@@ -44,9 +44,8 @@ export const saveAthlete = athleteData => {
       });
 
       let {athlete, success} = res.data;
-      console.log(res.data);
+
       if (success) {
-        console.log(athlete);
         dispatch({type: "SAVE_ATHLETE", payload: athlete});
         dispatch({type: "ATHELTE_LOADING", payload: false});
       }

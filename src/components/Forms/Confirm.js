@@ -15,7 +15,7 @@ const Confirm = props => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const values = JSON.stringify(props.values);
-  console.log(JSON.parse(values));
+
   return (
     <div>
       <FormGroup className={classes.formGroup}>
